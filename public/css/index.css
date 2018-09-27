@@ -3,6 +3,10 @@
   text-decoration-color: white;
 }
 
+body{
+  background-color: ;
+}
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);

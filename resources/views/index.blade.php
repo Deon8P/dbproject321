@@ -53,19 +53,10 @@
 
 <main role="main">
 
-    <section class="jumbotron text-center">
-        <div class="container">
-            <img class="card-img-top" src="public/images.png" alt="HTML5 icon" width="100" height="100">
-            <h2 class="jumbotron-heading text-cyan ">Welcome to *insert awesome name here*.</h2>
-            <p class="lead text-white">Go ahead, click some stuff.</p>  
-        </div>
-    </section>
-
     <div class="album py-5 bg-dark">
         <div class="container " >
 
           <div class="row" >
-            @foreach($products as $product)
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="public/images.png" alt="HTML5 icon">
@@ -81,7 +72,6 @@
           </div>
       </div>
   </div>
-  @endforeach
 </div>
 </div>
 </div>

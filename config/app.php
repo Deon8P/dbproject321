@@ -159,6 +159,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        //MongoDb Service Provider
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
     ],
 
