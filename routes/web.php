@@ -18,3 +18,4 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'ProductsController@index');
+Route::post('/', 'ProductsController@search');
