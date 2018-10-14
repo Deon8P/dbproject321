@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;	
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class Product extends Eloquent
 {
@@ -11,5 +11,10 @@ class Product extends Eloquent
 
 	protected $fillable = [
 		'prod_name', 'prod_price', 'prod_url', 'prod_imgurl'
-	];
+    ];
+
+    public function __construct()
+    {
+        $this->setConnection('mongodb');
+    }
 }

@@ -2,22 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use DB;
 use App\Product;
 
 class ProductsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-    	$products = Product::simplePaginate(50);
+    	$products = Product::paginate(50);
 
-    	return view('index', compact('products'));
+    	return view('products.index', compact('products'));
     }
 
     public function search()
     {
-    	$products = Product::where('prod_name', 'LIKE', '%'.request('search').'%');
+        if(! request('search'))
+            return $this->index();
 
-    	return view('products', compact('products'));
+    	$products = Product::where('prod_name', 'LIKE', '%'.request('search').'%')->paginate(50);
+
+    	return view('products.index', compact('products'));
     }
 }

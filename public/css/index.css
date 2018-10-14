@@ -1,9 +1,7 @@
 html,
-body {
-  height: 100%;
-}
 
 body {
+height: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -333,7 +331,7 @@ th:hover{
 
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
   @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
-  
+
   /* variables
   card-width:  350px;
   card-height: 500px;
@@ -346,11 +344,11 @@ th:hover{
     margin: 0;
     padding: 0;
   }
-  
+
   body{
     background: #323c41;
   }
-  
+
   .blog-card{
     width: card-width;
     height: card-height;
@@ -367,7 +365,7 @@ th:hover{
     .spring-fever{
       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/bg-blog-card.jpg) no-repeat;
     }
-    
+
     .color-overlay{
       /* Rectangle 11: */
       background: rgba(84,104,110,0.4);
@@ -392,9 +390,9 @@ th:hover{
       left: 0;
       z-index: 15;
     }
-    
-    
-      
+
+
+
       .card-info:hover{
         opacity: 1;
         bottom: 120px;
@@ -402,9 +400,9 @@ th:hover{
       .color-overlay:hover{
         background: rgba(84,104,110,0.8);
       }
-    
-  
-  
+
+
+
   .title-content{
     text-align: center;
     margin: 70px 0 0 0;
@@ -453,7 +451,7 @@ th:hover{
     opacity: 0;
     transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
   }
-  
+
   .utility-info{
     position: absolute;
     bottom: 0px;
@@ -479,4 +477,3 @@ th:hover{
       .date{
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-calendar.svg) no-repeat 0 .1em;
       }
-   

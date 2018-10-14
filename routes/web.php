@@ -11,11 +11,14 @@
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('index');
-});
-*/
+Route::get('/login', 'SessionsController@create')->name('login');
+Route::post('/login', 'SessionsController@storeUserSession');
+Route::get('/logout', 'SessionsController@destroy');
 
-Route::get('/', 'ProductsController@index');
-Route::post('/', 'ProductsController@search');
+Route::get('/register', 'RegistrationsController@index');
+Route::post('/register', 'RegistrationsController@storeUser');
+
+Route::get('/home', 'UsersController@home')->name('home');
+
+Route::get('/products', 'ProductsController@index');
+Route::post('/products', 'ProductsController@search');

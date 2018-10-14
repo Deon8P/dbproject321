@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::connection('mongodb')->create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('prod_name');
             $table->string('prod_price');
@@ -32,6 +32,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::connection('mongodb')->dropIfExists('products');
     }
 }

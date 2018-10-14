@@ -1,3 +1,6 @@
+@if($products)
+
+@if(! $products->isEmpty())
     <div class="container row " id="products" name="products" style="overflow-y: scroll; position: absolute; top: 6%; right: 1%; height: 93%">
     @foreach($products as $product)
         <div class="product col-md-4">
@@ -16,4 +19,17 @@
         </div>
         @endforeach
       {{ $products->links() }}
-      </div>
+    </div>
+    @else
+
+    <div class="container" style="position: absolute; top: 30%; right: 2%;">
+    <h1 class="text-center text-muted">No items found.</h1>
+
+@endif
+@else
+
+    <div class="container" style="position: absolute; top: 30%; right: 2%;">
+        <h1 class="text-center text-muted">No items found.</h1>
+    </div>
+
+@endif

@@ -34,6 +34,18 @@ return [
     'connections' => [
 
         'oracle' => [
+            'driver' => 'oracle',
+            'host' => 'localhost',
+            'port' => '1521',
+            'database' => 'root',
+            'service_name' => 'root',
+            'username' => 'system',
+            'password' => 'root',
+            'charset' => '',
+            'prefix' => '',
+        ],
+
+        'oracle2' => [
             'driver'        => 'oracle',
             'tns'           => env('DB_TNS', ''),
             'host'          => env('DB_HOST', ''),
