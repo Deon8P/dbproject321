@@ -9,7 +9,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
-    	$products = Product::all();
+    	$products = Product::simplePaginate(50);
 
     	return view('index', compact('products'));
     }

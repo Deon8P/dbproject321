@@ -159,9 +159,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
+
         //MongoDb Service Provider
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+        //OracleDB Service Provider
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        Yajra\Oci8\Oci8ServiceProvider::class,
 
     ],
 
@@ -211,6 +214,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
     ],
 
