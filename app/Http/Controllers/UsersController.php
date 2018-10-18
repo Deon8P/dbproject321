@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 class UsersController extends Controller
 {
@@ -14,23 +15,8 @@ class UsersController extends Controller
 
     public function home()
     {
-        return view('home.index');
+        $history = DB::connection('oracle')->table('compare_products')->where('user_id', '=', Auth::user()->id)->get();
+
+        return view('home.index', compact('history'));
     }
-
-    public function updateManager($username)
-    {
-        try
-        {
-             if (request('username')) {
-                    User::updateUserName($username, request('username'));
-                }
-            }
-        catch (ModelNotFoundException $exception)
-        {
-            return back()->withError($exception->getMessage())->withInput();
-        }
-
-        return back()->with('status', 'Manager has been updated.');
-   }
-
 }

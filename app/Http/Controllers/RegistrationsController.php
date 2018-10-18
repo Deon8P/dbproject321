@@ -28,13 +28,15 @@ class RegistrationsController extends Controller
             $email = $request->input('email');
             $password = $request->input('password');
 
-            if(DB::conection('oracle')->table('users')->where('username', '=', $username) || DB::conection('oracle')->table('users')->where('email', '=', $email))
+            if(DB::connection('oracle')->table('users')->where('username', '=', $username) || DB::connection('oracle')->table('users')->where('email', '=', $email))
                 return back()->withError($exception->getMessage())->withInput();
 
             DB::connection('oracle')->table('users')->insert([
                 'username' => $username,
                 'email' => $email,
                 'password' => bcrypt($password),
+                'created_at' => date("Y-m-d"),
+                'updated_at' => date("Y-m-d")
             ]);
 
             $user = [

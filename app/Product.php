@@ -10,7 +10,7 @@ class Product extends Eloquent
 	protected $collection = 'products';
 
 	protected $fillable = [
-		'prod_name', 'prod_price', 'prod_url', 'prod_imgurl'
+		'prod_id', 'prod_name', 'prod_price', 'prod_url', 'prod_imgurl'
     ];
 
     public function __construct()

@@ -24,12 +24,17 @@ input:valid
     border: 3px solid #006249;
 }
 
+.boxHover:hover{
+    background-color: #1d90be;
+  }
+
 .transition{
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
+
 a{color:#71b346;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
@@ -471,9 +476,25 @@ th:hover{
       color: lightgrey;
       font-family: 'Roboto', sans-serif;
     }
+
       .comments{
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-chat.svg) no-repeat 0 .1em;
       }
       .date{
         background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1765/icon-calendar.svg) no-repeat 0 .1em;
       }
+
+      .squaredOne {
+        width: 28px;
+        height: 28px;
+        position: relative;
+        margin: 20px auto;
+        background: #71b346;
+        background: linear-gradient(top, #71b346 0%, #71b346 40%, #71b346 100%);
+        box-shadow: inset 0px 1px 1px #71b346, 0px 1px 3px rgba(6, 112, 46, 0.5);
+      }
+        input[type=checkbox] {
+            opacity: 1;
+        }
+
+
