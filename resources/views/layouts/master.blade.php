@@ -7,7 +7,7 @@
   <meta name="author" content="Cybertronix-Group">
   <link rel="icon" href="images/Logo.png">
 
-  <title>Album example for Bootstrap</title>
+  <title>Cybertronix</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">

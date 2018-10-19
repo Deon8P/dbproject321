@@ -42,8 +42,8 @@ class ProductsController extends Controller
             'prod_disc_2' => $request->input('disc2'),
             'prod_price_1' => $request->input('price1'),
             'prod_price_2' => $request->input('price2'),
-            'created_at' => date("Y-m-d"),
-            'updated_at' => date("Y-m-d")
+            'created_at' => date("Y-m-d h:i:s"),
+            'updated_at' => date("Y-m-d h:i:s")
 
         ]);
 

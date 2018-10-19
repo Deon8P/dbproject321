@@ -1,7 +1,7 @@
 @if($products)
 
 @if(! $products->isEmpty())
-    <div class="container row " id="products" name="products" style="overflow-y: scroll; position: absolute; top: 7%; right: 1%; height: 93%">
+    <div class="container row " id="products" name="products" style="overflow-y: scroll; position: absolute; top: 7%; right: 1%; height: 93%;">
     @foreach($products as $product)
         <div class="product col-md-4 "  >
           <div class="card mb-3 mt-3 shadow-sm" >
